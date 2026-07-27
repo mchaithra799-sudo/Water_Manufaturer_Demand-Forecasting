@@ -412,22 +412,24 @@ def page_geography() -> None:
     fc_year = fc["yearly"][fc["yearly"]["Region"] != "ALL"][["Region", "Forecast_Demand"]]
     g = g.merge(fc_year, on="Region")
 
-    fig = px.scatter_geo(
-        g, lat="Latitude", lon="Longitude", color="Region",
+    # Positional bubble map (longitude x latitude) — renders offline with no
+    # external basemap/CDN, so it works in Docker and restricted networks.
+    fig = px.scatter(
+        g, x="Longitude", y="Latitude", color="Region",
         size="Avg_Daily_Demand", text="City_Proxy",
-        color_discrete_map=REGION_COLORS, size_max=42, scope="asia",
-        hover_data={"Latitude": False, "Longitude": False,
-                    "Served_Population_M": True, "Climate_Zone": True,
-                    "Avg_Daily_Demand": ":,.0f"},
+        color_discrete_map=REGION_COLORS, size_max=52,
+        hover_data={"Longitude": False, "Latitude": False, "Region": False,
+                    "City_Proxy": True, "Climate_Zone": True,
+                    "Served_Population_M": True, "Avg_Daily_Demand": ":,.0f"},
     )
-    fig.update_traces(textposition="top center")
-    fig.update_geos(center=dict(lat=22, lon=80), projection_scale=3.2,
-                    showcountries=True, landcolor="rgba(150,150,150,0.10)",
-                    countrycolor="rgba(150,150,150,0.35)")
-    fig.update_layout(height=460, margin=dict(l=0, r=0, t=10, b=0),
-                      paper_bgcolor="rgba(0,0,0,0)", showlegend=True,
-                      legend=dict(orientation="h", y=1.02))
+    fig.update_traces(textposition="top center",
+                      marker=dict(line=dict(width=1.5, color="rgba(255,255,255,0.7)")))
+    fig = style_fig(fig, 460)
+    fig.update_layout(hovermode="closest", xaxis_title="Longitude (°E)",
+                      yaxis_title="Latitude (°N)")
     st.plotly_chart(fig, use_container_width=True)
+    st.caption("Bubble size = average daily demand · positioned by each zone's "
+               "real longitude / latitude (north is up).")
 
     colA, colB = st.columns([3, 2])
     with colA:
