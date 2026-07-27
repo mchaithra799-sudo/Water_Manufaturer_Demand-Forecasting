@@ -1,0 +1,20 @@
+# Core data + ML
+pandas>=2.0
+numpy>=1.24
+openpyxl>=3.1          # read the provided .xlsx dataset
+scikit-learn>=1.3      # RandomForest / HistGradientBoosting
+joblib>=1.3            # model persistence
+
+# Dashboard
+streamlit>=1.40,<2.0
+plotly>=5.18
+
+# Nice-to-have (EDA trendlines + Excel export). The app degrades gracefully
+# if statsmodels is absent.
+statsmodels>=0.14
+xlsxwriter>=3.1
+
+# Notebook EDA (notebooks/Demand_Forecasting_Pipeline.ipynb)
+matplotlib>=3.7
+seaborn>=0.12
+jupyter>=1.0

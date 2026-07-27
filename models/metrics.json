@@ -1,0 +1,239 @@
+{
+  "best_model": "HistGradientBoosting",
+  "validation": {
+    "RandomForest": {
+      "MAE": 849.9735651630458,
+      "RMSE": 1081.7802234650114,
+      "MAPE": 7.000545228250353,
+      "R2": 0.8470427889323789
+    },
+    "HistGradientBoosting": {
+      "MAE": 818.6467926812076,
+      "RMSE": 1045.221365039649,
+      "MAPE": 6.704939477859319,
+      "R2": 0.8572065002562046
+    }
+  },
+  "cross_validation": {
+    "MAE": 840.13813275501,
+    "RMSE": 1089.8174524428,
+    "MAPE": 6.873170491962979,
+    "R2": 0.8160869025670623
+  },
+  "holdout_split_date": "2023-01-01",
+  "residual_std": 1024.9284455779355,
+  "n_train_rows": 2920,
+  "n_val_rows": 1460,
+  "n_features": 52,
+  "target": "Target_Demand",
+  "feature_importance": [
+    {
+      "feature": "Temperature_C",
+      "importance": 0.7026271484258814
+    },
+    {
+      "feature": "Served_Population_M",
+      "importance": 0.5569762236726671
+    },
+    {
+      "feature": "Is_Festival",
+      "importance": 0.08326504848555179
+    },
+    {
+      "feature": "Plastic_Ban_Active",
+      "importance": 0.042242834339045764
+    },
+    {
+      "feature": "Humidity_pct",
+      "importance": 0.021218897699047678
+    },
+    {
+      "feature": "Season_Summer",
+      "importance": 0.011523427063666491
+    },
+    {
+      "feature": "Water_Stress_Index",
+      "importance": 0.00972198260159236
+    },
+    {
+      "feature": "Drought_Index",
+      "importance": 0.008685881235451508
+    },
+    {
+      "feature": "Tourism_Index",
+      "importance": 0.005636756590493541
+    },
+    {
+      "feature": "Heat_Index_C",
+      "importance": 0.00545311593049067
+    },
+    {
+      "feature": "Election_Period",
+      "importance": 0.004623401216580314
+    },
+    {
+      "feature": "Consumer_Confidence",
+      "importance": 0.0044121637742875475
+    },
+    {
+      "feature": "Temp_Anomaly_C",
+      "importance": 0.004247823385641647
+    },
+    {
+      "feature": "Political_Stability_Index",
+      "importance": 0.004104177004754783
+    },
+    {
+      "feature": "Wind_Speed_kmph",
+      "importance": 0.0031350347109728727
+    },
+    {
+      "feature": "Air_Quality_Index",
+      "importance": 0.0025820191104752423
+    },
+    {
+      "feature": "Economic_Index",
+      "importance": 0.00257323637540523
+    },
+    {
+      "feature": "DayOfWeek",
+      "importance": 0.0024252918765834686
+    },
+    {
+      "feature": "TrendIndex",
+      "importance": 0.002303209048220345
+    },
+    {
+      "feature": "Water_Tax_Rate",
+      "importance": 0.002215731933902987
+    },
+    {
+      "feature": "UV_Index",
+      "importance": 0.002097781806700971
+    },
+    {
+      "feature": "Extreme_Weather_Flag",
+      "importance": 0.0018917232536407092
+    },
+    {
+      "feature": "DayOfYear_cos",
+      "importance": 0.0018887266439557404
+    },
+    {
+      "feature": "Day",
+      "importance": 0.0017890614230561264
+    },
+    {
+      "feature": "DayOfYear_sin",
+      "importance": 0.0017798442353532894
+    },
+    {
+      "feature": "Rainfall_mm",
+      "importance": 0.0012080418542784078
+    },
+    {
+      "feature": "DayOfYear",
+      "importance": 0.0009133900354103108
+    },
+    {
+      "feature": "Latitude",
+      "importance": 0.0007171615290883615
+    },
+    {
+      "feature": "Longitude",
+      "importance": 0.00028145974040343357
+    },
+    {
+      "feature": "Govt_Subsidy_Active",
+      "importance": 0.00015992425280917378
+    },
+    {
+      "feature": "WeekOfYear",
+      "importance": 0.00014931135457469936
+    },
+    {
+      "feature": "Month_cos",
+      "importance": 0.00013774275091085197
+    },
+    {
+      "feature": "Month_sin",
+      "importance": 8.568183822521558e-05
+    },
+    {
+      "feature": "Month",
+      "importance": 4.420939131231094e-05
+    },
+    {
+      "feature": "Year",
+      "importance": 3.089398335300864e-05
+    },
+    {
+      "feature": "Elevation_m",
+      "importance": 4.842822167527849e-06
+    },
+    {
+      "feature": "Urbanisation",
+      "importance": 0.0
+    },
+    {
+      "feature": "Coastal",
+      "importance": 0.0
+    },
+    {
+      "feature": "Area_k_km2",
+      "importance": 0.0
+    },
+    {
+      "feature": "Quarter",
+      "importance": 0.0
+    },
+    {
+      "feature": "IsWeekend",
+      "importance": 0.0
+    },
+    {
+      "feature": "Region_East_Zone",
+      "importance": 0.0
+    },
+    {
+      "feature": "Region_North_Zone",
+      "importance": 0.0
+    },
+    {
+      "feature": "Region_South_Zone",
+      "importance": 0.0
+    },
+    {
+      "feature": "Region_West_Zone",
+      "importance": 0.0
+    },
+    {
+      "feature": "Season_Autumn",
+      "importance": 0.0
+    },
+    {
+      "feature": "Season_Monsoon",
+      "importance": 0.0
+    },
+    {
+      "feature": "Season_Winter",
+      "importance": 0.0
+    },
+    {
+      "feature": "Climate_Zone_Humid_Subtropical",
+      "importance": 0.0
+    },
+    {
+      "feature": "Climate_Zone_Semi_Arid",
+      "importance": 0.0
+    },
+    {
+      "feature": "Climate_Zone_Tropical_Monsoon",
+      "importance": 0.0
+    },
+    {
+      "feature": "Climate_Zone_Tropical_Wet_Dry",
+      "importance": 0.0
+    }
+  ]
+}

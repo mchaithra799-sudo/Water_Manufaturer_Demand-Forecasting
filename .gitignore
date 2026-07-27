@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+
+# Streamlit secrets (never commit real secrets)
+.streamlit/secrets.toml
+
+# NOTE: data/processed/* and models/* ARE committed on purpose so the
+# dashboard runs out-of-the-box without first running the pipeline.

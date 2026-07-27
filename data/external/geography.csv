@@ -1,0 +1,5 @@
+Region,City_Proxy,Latitude,Longitude,Served_Population_M,Urbanisation,Elevation_m,Coastal,Area_k_km2,Climate_Zone
+North_Zone,Delhi NCR,28.61,77.21,30.5,0.92,216,0,1.48,Semi_Arid
+South_Zone,Chennai,13.08,80.27,29.2,0.9,6,1,0.43,Tropical_Wet_Dry
+East_Zone,Kolkata,22.57,88.36,18.4,0.82,9,1,1.85,Humid_Subtropical
+West_Zone,Mumbai,19.08,72.88,17.1,0.83,14,1,0.6,Tropical_Monsoon

@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "1 · Install dependencies",
+      "type": "shell",
+      "command": "pip install -r requirements.txt",
+      "problemMatcher": []
+    },
+    {
+      "label": "2 · Run pipeline (data + train + forecast)",
+      "type": "shell",
+      "command": "python run_pipeline.py",
+      "problemMatcher": []
+    },
+    {
+      "label": "3 · Launch dashboard",
+      "type": "shell",
+      "command": "streamlit run app/app.py",
+      "isBackground": true,
+      "problemMatcher": []
+    }
+  ]
+}
